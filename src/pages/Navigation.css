@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-left {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-evenly; 
+  flex: 1; 
+  gap: 10px; 
+  margin-left: 20px;
+}
+
+.navbar-right button {
+  flex: 1; 
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+/* Hover effect */
+.navbar-right button:hover {
+  text-decoration: underline;
+}
+
+/* Disabled buttons (optional) */
+.navbar-right button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Responsive: stack links on smaller screens */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 0;
+  }
+
+  .navbar-right button {
+    flex: none;
+    width: auto;
+  }
+}
